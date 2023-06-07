@@ -1,8 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+import { Storage } from "@ionic/storage";
 
 function App() {
+  const store = new Storage();
+
+  store.create().then(() => console.log("Storage created"));
+
   return (
     <div className="App">
       <header className="App-header">
